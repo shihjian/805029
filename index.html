@@ -72,8 +72,8 @@
                     </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                        <a href="#" class="btn btn-outline-primary mr-2">登入</a>
-                        <a href="#" class="btn btn-primary">註冊</a>
+                        <a href="#" class="btn btn-outline-primary mr-2" data-toggle="modal" data-target="#loginModal">登入</a>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">註冊</a>
                     </form>
                 </div>
             </div>
@@ -317,7 +317,8 @@
                                         });
                                       }, false);
                                     })();
-                                    </script>
+                             </script>
+                                
                             <div class="custom-control custom-radio">
                                     <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio1">需要素食</label>
@@ -360,7 +361,85 @@
                 <div class="bg-secondary py-4">
                         <div class="container text-center">
                         <p>© Copright 2017 六角學院</p>
+                </div>
+
+                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                          <h5 class="modal-title" id="exampleModalLabel">登入</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                <div class="form-group">
+                                        <label for="username">帳號*</label>
+                                        <input type="text" class="form-control" id="username" placeholder="請輸入帳號" >
+                                        <div class="invalid-feedback">
+                                                輸入有效帳號
+                                              </div>
+                                </div>
+
+                                <div class="form-group">
+                                        <label for="pass">密碼*</label>
+                                        <input type="text" class="form-control" id="pass" placeholder="請輸入密碼" >
+                                        <div class="invalid-feedback">
+                                                輸入有效密碼
+                                              </div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">我要註冊</a>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                          <button type="button" class="btn btn-primary">登入</button>
+                        </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header bg-warning text-white ">
+                          <h5 class="modal-title" id="exampleModalLabel">註冊</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                <div class="form-group">
+                                        <label for="username">姓名*</label>
+                                        <input type="text" class="form-control" id="username" placeholder="請輸入姓名" required>
+                                        <div class="invalid-feedback">
+                                                輸入有效姓名
+                                              </div>
+                                    </div>
+    
+                                    <div class="form-group">
+                                            <label for="call">請輸入電話號碼*</label>
+                                            <input type="tel" class="form-control" id="call" placeholder="請輸入電話號碼" required>
+                                            <div class="invalid-feedback">
+                                                    請輸入電話
+                                                  </div>
+                                        </div>
+    
+                                        <div class="form-group">
+                                                <label for="email">請輸入 Email</label>
+                                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                                <div class="invalid-feedback">
+                                                        請輸入信箱
+                                                      </div>
+                                            </div>
+                        </div>
+                        <div class="modal-footer">
+                                <a href="" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">我要登入</a>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                          <button type="button" class="btn btn-primary">登入</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
